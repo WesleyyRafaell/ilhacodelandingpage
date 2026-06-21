@@ -4,10 +4,14 @@ export function CTA() {
   const { ref, isVisible } = useScrollReveal()
 
   return (
-    <section className="relative overflow-hidden bg-navy-500 py-24 sm:py-28">
+    <section className="relative overflow-hidden py-24 sm:py-28">
+      <div className="absolute inset-0">
+        <img src="/public/boi.jpg" alt="" className="h-full w-full object-cover" />
+      </div>
+      <div className="absolute inset-0 bg-navy-500/80" />
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute top-0 left-1/4 h-80 w-80 -translate-y-1/2 rounded-full bg-gold-500/10 blur-[100px]" />
-        <div className="absolute bottom-0 right-1/4 h-80 w-80 translate-y-1/2 rounded-full bg-white/5 blur-[100px]" />
+        <div className="absolute top-0 left-1/4 h-80 w-80 -translate-y-1/2 rounded-full bg-gold-500/15 blur-[100px]" />
+        <div className="absolute bottom-0 right-1/4 h-80 w-80 translate-y-1/2 rounded-full bg-white/10 blur-[100px]" />
       </div>
 
       <div ref={ref} className={`container-section mx-auto relative text-center reveal ${isVisible ? 'visible' : ''}`}>

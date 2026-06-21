@@ -51,30 +51,40 @@ export function Header() {
           </div>
         </button>
 
-        {isOpen && (
-          <div className="fixed inset-0 z-40 flex animate-slide-down flex-col items-center justify-center gap-8 bg-cream/98 backdrop-blur-xl md:hidden">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="font-heading text-3xl font-medium text-navy-500 transition-colors hover:text-gold-500"
-              >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="https://wa.me/5598999999999"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setIsOpen(false)}
-              className="mt-4 rounded-full bg-navy-500 px-8 py-3 font-semibold text-white shadow-lg"
-            >
-              Solicitar orçamento
-            </a>
-          </div>
-        )}
       </div>
+
+      {isOpen && (
+        <div className="fixed w-screen h-screen inset-0 z-60 flex flex-col items-center justify-center gap-8 bg-white md:hidden">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-6 right-6 flex h-10 w-10 items-center justify-center rounded-lg text-navy-500/50 hover:text-navy-500"
+            aria-label="Fechar menu"
+          >
+            <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M18 6L6 18" /><path d="M6 6l12 12" />
+            </svg>
+          </button>
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className="font-heading text-3xl font-semibold text-navy-500 transition-colors hover:text-gold-500"
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="https://wa.me/5598999999999"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsOpen(false)}
+            className="mt-2 rounded-full bg-navy-500 px-10 py-3.5 font-semibold text-white shadow-lg"
+          >
+            Solicitar orçamento
+          </a>
+        </div>
+        )}
     </header>
   )
 }
