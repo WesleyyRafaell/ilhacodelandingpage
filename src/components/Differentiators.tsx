@@ -37,12 +37,17 @@ const differentiators = [
   },
 ]
 
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
 export function Differentiators() {
+  const { ref: imgRef, isVisible: imgVisible } = useScrollReveal()
+  const { ref: textRef, isVisible: textVisible } = useScrollReveal()
+
   return (
     <section className="py-24 sm:py-28">
       <div className="container-section mx-auto">
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
-          <div className="order-2 lg:order-1">
+          <div ref={imgRef} className={`order-2 lg:order-1 reveal ${imgVisible ? 'visible' : ''}`}>
             <div className="overflow-hidden rounded-2xl border border-navy-500/10 bg-white shadow-xl">
               <div className=" bg-gradient-to-br from-navy-500/5 via-cream to-navy-500/5">
                   <img src="/public/lencois.webp" alt="" />
@@ -50,7 +55,7 @@ export function Differentiators() {
             </div>
           </div>
 
-          <div className="order-1 lg:order-2">
+          <div ref={textRef} className={`order-1 lg:order-2 reveal ${textVisible ? 'visible' : ''}`}>
             <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-gold-500">
               Diferenciais
             </p>
@@ -64,8 +69,8 @@ export function Differentiators() {
             </p>
 
             <div className="mt-8 space-y-5">
-              {differentiators.map((item) => (
-                <div key={item.title} className="flex gap-4">
+              {differentiators.map((item, i) => (
+                <div key={item.title} className={`flex gap-4 reveal reveal-delay-${i + 1} ${textVisible ? 'visible' : ''}`}>
                   <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-navy-500/5 text-navy-500">
                     {item.icon}
                   </div>

@@ -63,10 +63,14 @@ const problems = [
   },
 ]
 
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
 export function Problems() {
+  const { ref, isVisible } = useScrollReveal()
+
   return (
     <section id="servicos" className="py-24 sm:py-28">
-      <div className="container-section mx-auto">
+      <div ref={ref} className={`container-section mx-auto reveal ${isVisible ? 'visible' : ''}`}>
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-gold-500">
             Dores comuns
@@ -81,10 +85,10 @@ export function Problems() {
         </div>
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {problems.map((problem) => (
+          {problems.map((problem, i) => (
             <div
               key={problem.title}
-              className="group rounded-2xl border border-navy-500/8 bg-white/60 p-6 backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-navy-500/15 hover:bg-white hover:shadow-lg"
+              className={`group rounded-2xl border border-navy-500/8 bg-white/60 p-6 backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-navy-500/15 hover:bg-white hover:shadow-lg reveal reveal-delay-${i + 1} ${isVisible ? 'visible' : ''}`}
             >
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-navy-500/5 text-navy-500 transition-all group-hover:bg-navy-500/10">
                 {problem.icon}

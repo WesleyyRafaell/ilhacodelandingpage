@@ -37,12 +37,17 @@ const solutions = [
   },
 ]
 
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
 export function Solutions() {
+  const { ref: textRef, isVisible: textVisible } = useScrollReveal()
+  const { ref: cardsRef, isVisible: cardsVisible } = useScrollReveal()
+
   return (
     <section className="">
       <div className="container-section mx-auto">
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
-          <div>
+          <div ref={textRef} className={`reveal ${textVisible ? 'visible' : ''}`}>
             <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-gold-500">
               Nossas soluções
             </p>
@@ -57,11 +62,11 @@ export function Solutions() {
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {solutions.map((sol) => (
+          <div ref={cardsRef} className="grid gap-4 sm:grid-cols-2">
+            {solutions.map((sol, i) => (
               <div
                 key={sol.title}
-                className="group rounded-2xl border border-navy-500/8 bg-white/60 p-6 backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-navy-500/15 hover:bg-white hover:shadow-lg"
+                className={`group rounded-2xl border border-navy-500/8 bg-white/60 p-6 backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-navy-500/15 hover:bg-white hover:shadow-lg reveal reveal-delay-${i + 1} ${cardsVisible ? 'visible' : ''}`}
               >
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-navy-500/5 text-navy-500 transition-all group-hover:bg-navy-500/10">
                   {sol.icon}

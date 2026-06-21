@@ -29,10 +29,14 @@ const steps = [
   },
 ]
 
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
 export function Process() {
+  const { ref, isVisible } = useScrollReveal()
+
   return (
     <section id="processos" className="bg-navy-500 py-24 sm:py-28">
-      <div className="container-section mx-auto">
+      <div ref={ref} className={`container-section mx-auto reveal ${isVisible ? 'visible' : ''}`}>
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-gold-500">
             Nosso processo
@@ -48,10 +52,10 @@ export function Process() {
         </div>
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step) => (
+          {steps.map((step, i) => (
             <div
               key={step.number}
-              className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-xl"
+              className={`group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-xl reveal reveal-delay-${i + 1} ${isVisible ? 'visible' : ''}`}
             >
               <div className={`mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl text-sm font-bold text-white ${step.color}`}>
                 {step.number}

@@ -1,4 +1,8 @@
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
 export function CTA() {
+  const { ref, isVisible } = useScrollReveal()
+
   return (
     <section className="relative overflow-hidden bg-navy-500 py-24 sm:py-28">
       <div className="pointer-events-none absolute inset-0">
@@ -6,16 +10,16 @@ export function CTA() {
         <div className="absolute bottom-0 right-1/4 h-80 w-80 translate-y-1/2 rounded-full bg-white/5 blur-[100px]" />
       </div>
 
-      <div className="container-section mx-auto relative text-center">
+      <div ref={ref} className={`container-section mx-auto relative text-center reveal ${isVisible ? 'visible' : ''}`}>
         <h2 className="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
           Vamos tirar sua ideia<br />
           <span className="text-gold-500">da conversa?</span>
         </h2>
-        <p className="mx-auto mt-4 max-w-lg font-sans text-base leading-relaxed text-white/70">
+        <p className={`mx-auto mt-4 max-w-lg font-sans text-base leading-relaxed text-white/70 reveal reveal-delay-1 ${isVisible ? 'visible' : ''}`}>
           Mande uma mensagem no WhatsApp para receber um direcionamento inicial
           sobre seu projeto. Sem burocracia, sem compromisso.
         </p>
-        <div className="mt-8 flex justify-center">
+        <div className={`mt-8 flex justify-center reveal reveal-delay-2 ${isVisible ? 'visible' : ''}`}>
           <a
             href="https://wa.me/5598999999999"
             target="_blank"

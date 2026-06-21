@@ -1,7 +1,11 @@
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
 export function Footer() {
+  const { ref, isVisible } = useScrollReveal()
+
   return (
     <footer className="border-t border-navy-500/10 bg-cream">
-      <div className="container-section mx-auto py-16">
+      <div ref={ref} className={`container-section mx-auto py-16 reveal ${isVisible ? 'visible' : ''}`}>
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-2">
             <a href="/" className="flex items-center gap-2.5">

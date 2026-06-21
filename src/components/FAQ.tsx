@@ -23,12 +23,15 @@ const faqs = [
   },
 ]
 
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const { ref, isVisible } = useScrollReveal()
 
   return (
     <section id="faq" className="pb-24 sm:pb-28">
-      <div className="container-section mx-auto">
+      <div ref={ref} className={`container-section mx-auto reveal ${isVisible ? 'visible' : ''}`}>
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-gold-500">
             Perguntas frequentes
