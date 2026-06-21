@@ -12,14 +12,14 @@ export function About() {
             <div className="overflow-hidden rounded-2xl border border-navy-500/10 bg-white shadow-xl">
               <div className="aspect-[4/3] bg-gradient-to-br from-navy-500/5 via-cream to-gold-500/5">
                 <div className="flex h-full flex-col items-center justify-center rounded-xl border border-navy-500/5 bg-cream/80">
-                  <img src="/azulejos.png" alt="" />
+                  <img src="/azulejos.png" alt="Azulejos decorativos típicos de São Luís" width={1254} height={1254} className="w-full" />
                 </div>
               </div>
             </div>
           </div>
 
           <div ref={textRef} className={`order-1 lg:order-2 reveal ${textVisible ? 'visible' : ''}`}>
-            <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-gold-500">
+            <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-navy-500">
               Nossa história
             </p>
             <h2 className="font-heading text-3xl font-bold leading-tight text-navy-500 sm:text-4xl lg:text-5xl">
@@ -45,7 +45,7 @@ export function About() {
               ].map((stat, i) => (
                 <div key={stat.label} className={`rounded-xl border border-navy-500/8 bg-white/60 p-4 text-center reveal reveal-delay-${i + 1} ${textVisible ? 'visible' : ''}`}>
                   <p className="font-heading text-2xl font-bold text-navy-500">{stat.value}</p>
-                  <p className="mt-0.5 font-sans text-xs text-ink-lighter">{stat.label}</p>
+                  <p className="mt-0.5 font-sans text-xs text-ink-light">{stat.label}</p>
                 </div>
               ))}
             </div>

@@ -48,7 +48,7 @@ export function Solutions() {
       <div className="container-section mx-auto">
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <div ref={textRef} className={`reveal ${textVisible ? 'visible' : ''}`}>
-            <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-gold-500">
+            <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-navy-500">
               Nossas soluções
             </p>
             <h2 className="font-heading text-3xl font-bold leading-tight text-navy-500 sm:text-4xl lg:text-5xl">

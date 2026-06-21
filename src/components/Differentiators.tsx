@@ -50,13 +50,13 @@ export function Differentiators() {
           <div ref={imgRef} className={`order-2 lg:order-1 reveal ${imgVisible ? 'visible' : ''}`}>
             <div className="overflow-hidden rounded-2xl border border-navy-500/10 bg-white shadow-xl">
               <div className=" bg-gradient-to-br from-navy-500/5 via-cream to-navy-500/5">
-                  <img src="/lencois.webp" alt="" />
+                  <img src="/lencois.webp" alt="Lençóis Maranhenses" width={1920} height={1280} className="w-full" />
               </div>
             </div>
           </div>
 
           <div ref={textRef} className={`order-1 lg:order-2 reveal ${textVisible ? 'visible' : ''}`}>
-            <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-gold-500">
+            <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-navy-500">
               Diferenciais
             </p>
             <h2 className="font-heading text-3xl font-bold leading-tight text-navy-500 sm:text-4xl lg:text-5xl">

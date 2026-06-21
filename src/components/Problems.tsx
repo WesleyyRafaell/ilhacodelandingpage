@@ -72,7 +72,7 @@ export function Problems() {
     <section id="servicos" className="py-24 sm:py-28">
       <div ref={ref} className={`container-section mx-auto reveal ${isVisible ? 'visible' : ''}`}>
         <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-gold-500">
+          <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-navy-500">
             Dores comuns
           </p>
           <h2 className="font-heading text-3xl font-bold leading-tight text-navy-500 sm:text-4xl lg:text-5xl">

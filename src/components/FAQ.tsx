@@ -33,9 +33,9 @@ export function FAQ() {
     <section id="faq" className="pb-24 sm:pb-28">
       <div ref={ref} className={`container-section mx-auto reveal ${isVisible ? 'visible' : ''}`}>
         <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-gold-500">
-            Perguntas frequentes
-          </p>
+            <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-navy-500">
+              Perguntas frequentes
+            </p>
           <h2 className="font-heading text-3xl font-bold leading-tight text-navy-500 sm:text-4xl lg:text-5xl">
             Ficou alguma dúvida?
           </h2>
@@ -49,6 +49,7 @@ export function FAQ() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                aria-expanded={openIndex === i}
                 className="flex w-full items-center justify-between px-6 py-5 text-left"
               >
                 <span className="font-heading text-lg font-semibold text-navy-500">

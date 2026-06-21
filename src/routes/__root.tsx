@@ -17,7 +17,6 @@ export const Route = createRootRoute({
         title: 'Ilha Code | Software House em São Luís do Maranhão',
         description:
           'Criamos sistemas web, aplicativos e automações sob medida para empresas que desejam crescer com eficiência. Tecnologia com alma de São Luís.',
-        image: '/og-image.png',
         url: 'https://ilhacode.com.br',
       }),
     ],

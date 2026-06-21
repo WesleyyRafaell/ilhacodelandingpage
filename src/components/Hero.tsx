@@ -60,7 +60,7 @@ export function Hero() {
                   </span>
                 </div>
                 <div className="h-80">
-                  <img src="/bgprimary.png" alt="" />
+                  <img src="/bgprimary.png" alt="Demonstração de interface de sistema web" width={1536} height={1024} className="h-full w-full object-cover" />
                 </div>
               </div>
 
@@ -73,7 +73,7 @@ export function Hero() {
                   </div>
                   <div>
                     <p className="font-sans text-xs font-semibold text-ink">+50 projetos</p>
-                    <p className="font-sans text-xs text-ink-lighter">entregues</p>
+                    <p className="font-sans text-xs text-ink-light">entregues</p>
                   </div>
                 </div>
               </div>
@@ -87,7 +87,7 @@ export function Hero() {
                   </div>
                   <div>
                     <p className="font-sans text-xs font-semibold text-ink">100% sob medida</p>
-                    <p className="font-sans text-xs text-ink-lighter">cada projeto é único</p>
+                    <p className="font-sans text-xs text-ink-light">cada projeto é único</p>
                   </div>
                 </div>
               </div>
