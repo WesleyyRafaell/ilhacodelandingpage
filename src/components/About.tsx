@@ -12,7 +12,7 @@ export function About() {
             <div className="overflow-hidden rounded-2xl border border-navy-500/10 bg-white shadow-xl">
               <div className="aspect-[4/3] bg-gradient-to-br from-navy-500/5 via-cream to-gold-500/5">
                 <div className="flex h-full flex-col items-center justify-center rounded-xl border border-navy-500/5 bg-cream/80">
-                  <img src="/public/azulejos.png" alt="" />
+                  <img src="/azulejos.png" alt="" />
                 </div>
               </div>
             </div>

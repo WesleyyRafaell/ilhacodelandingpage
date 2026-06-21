@@ -50,7 +50,7 @@ export function Differentiators() {
           <div ref={imgRef} className={`order-2 lg:order-1 reveal ${imgVisible ? 'visible' : ''}`}>
             <div className="overflow-hidden rounded-2xl border border-navy-500/10 bg-white shadow-xl">
               <div className=" bg-gradient-to-br from-navy-500/5 via-cream to-navy-500/5">
-                  <img src="/public/lencois.webp" alt="" />
+                  <img src="/lencois.webp" alt="" />
               </div>
             </div>
           </div>

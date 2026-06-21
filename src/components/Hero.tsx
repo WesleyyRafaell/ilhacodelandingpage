@@ -60,7 +60,7 @@ export function Hero() {
                   </span>
                 </div>
                 <div className="h-80">
-                  <img src="/public/bgprimary.png" alt="" />
+                  <img src="/bgprimary.png" alt="" />
                 </div>
               </div>
 
