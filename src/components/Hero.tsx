@@ -60,7 +60,7 @@ export function Hero() {
                   </span>
                 </div>
                 <div className="h-80">
-                  <img src="/bgprimary.png" alt="Demonstração de interface de sistema web" width={1536} height={1024} className="h-full w-full object-cover" />
+                  <img src="/bgprimary.webp" alt="Demonstração de interface de sistema web" width={840} height={560} fetchPriority="high" className="h-full w-full object-cover" />
                 </div>
               </div>
 

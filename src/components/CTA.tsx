@@ -6,7 +6,7 @@ export function CTA() {
   return (
     <section className="relative overflow-hidden py-24 sm:py-28">
       <div className="absolute inset-0">
-        <img src="/boi.jpg" alt="Cena cultural do Maranhão" className="h-full w-full object-cover" />
+        <img src="/boi.webp" alt="Cena cultural do Maranhão" className="h-full w-full object-cover" />
       </div>
       <div className="absolute inset-0 bg-navy-500/80" />
       <div className="pointer-events-none absolute inset-0">

@@ -27,10 +27,6 @@ export const Route = createRootRoute({
         href: 'https://fonts.gstatic.com',
         crossOrigin: 'anonymous',
       },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap',
-      },
       { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
       { rel: 'icon', type: 'image/png', href: '/favicon.png' },
       { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
@@ -45,6 +41,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     <html lang="pt-BR" className="scroll-smooth">
       <head>
         <HeadContent />
+        <script dangerouslySetInnerHTML={{
+          __html: `(function(){var d=document.createElement('link');d.rel='stylesheet';d.href='https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap';d.media='print';d.onload=function(){this.media='all'};document.head.appendChild(d)})()`
+        }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
