@@ -28,7 +28,7 @@ export function CTA() {
         </p>
         <div className={`mt-8 flex justify-center reveal reveal-delay-2 ${isVisible ? 'visible' : ''}`}>
           <a
-            href="https://wa.me/5598999999999"
+            href="https://wa.me/5598989101285?text=Ol%C3%A1!%20Tudo%20bem?%20Conheci%20o%20trabalho%20de%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20bater%20um%20papo%20sobre%20um%20projeto%20que%20tenho%20em%20mente.%20Podemos%20conversar?%0A"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 rounded-xl bg-gold-500 px-8 py-4 font-sans text-sm font-bold text-navy-500 shadow-xl shadow-gold-500/25 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:bg-gold-400 hover:shadow-2xl hover:shadow-gold-500/30"

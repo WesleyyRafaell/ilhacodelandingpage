@@ -34,13 +34,12 @@ export function Differentiators() {
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <div ref={imgRef} className={`order-2 lg:order-1 reveal ${imgVisible ? 'visible' : ''}`}>
             <div className="relative">
-              <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-navy-500/10 to-gold-500/15" />
-              <div className="relative overflow-hidden rounded-[1.75rem] border border-navy-500/10 bg-white shadow-2xl shadow-navy-500/10">
-                <img src="/lencois.webp" alt="Lençóis Maranhenses" width={634} height={422} className="aspect-[4/3] w-full object-cover" />
+              <div className="relative overflow-hidden rounded-[1.75rem] bg-white shadow-2xl shadow-navy-500/10">
+                <img src="/lencois2.jpg" alt="Lençóis Maranhenses" width={634} height={720} className=" w-full object-cover" />
               </div>
               <div className="absolute -bottom-6 right-6 rounded-2xl bg-navy-500 p-5 text-white shadow-xl shadow-navy-500/20">
-                <p className="font-heading text-2xl font-bold text-gold-500">SLZ</p>
-                <p className="mt-1 text-xs font-medium text-white/70">base local, alcance nacional</p>
+                <p className="font-heading text-2xl font-bold text-gold-500">MA</p>
+                <p className="mt-1 text-xs font-medium text-white/70">Lençóis maranhenses</p>
               </div>
             </div>
           </div>

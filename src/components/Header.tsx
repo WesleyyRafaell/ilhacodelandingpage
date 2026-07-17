@@ -13,10 +13,10 @@ export function Header() {
 
   return (
     <header className="fixed left-0 right-0 top-4 z-50 px-4">
-      <div className="container-section mx-auto flex h-18 items-center justify-between rounded-2xl border border-navy-500/10 bg-cream-light/90 shadow-xl shadow-navy-500/8 backdrop-blur-md">
+      <div className="container-section mx-auto flex h-18 items-center justify-between rounded-2xl border border-navy-500/10 bg-white shadow-xl shadow-navy-500/8 backdrop-blur-md">
         <a href="/" className="flex items-center gap-2.5" aria-label="Ilha Code">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-navy-500 text-sm font-bold text-white shadow-sm shadow-navy-500/20">
-            IC
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl">
+            <img src="/logo.png" alt="logo Ilha Code" />
           </span>
           <span className="font-heading text-xl font-bold tracking-tight text-navy-500">
             Ilha <span className="text-gold-500">Code</span>
@@ -34,7 +34,7 @@ export function Header() {
             </a>
           ))}
           <a
-            href="https://wa.me/5598999999999"
+            href="https://wa.me/5598989101285?text=Ol%C3%A1!%20Tudo%20bem?%20Conheci%20o%20trabalho%20de%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20bater%20um%20papo%20sobre%20um%20projeto%20que%20tenho%20em%20mente.%20Podemos%20conversar?%0A"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-xl bg-navy-500 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-navy-500/15 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:bg-navy-600 hover:shadow-xl hover:shadow-navy-500/20"
@@ -73,7 +73,7 @@ export function Header() {
             </a>
           ))}
           <a
-            href="https://wa.me/5598999999999"
+            href="https://wa.me/5598989101285?text=Ol%C3%A1!%20Tudo%20bem?%20Conheci%20o%20trabalho%20de%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20bater%20um%20papo%20sobre%20um%20projeto%20que%20tenho%20em%20mente.%20Podemos%20conversar?%0A"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}

@@ -2,7 +2,7 @@ import { ArrowRight, CheckCircle2, Code2, Sparkles, TrendingUp } from 'lucide-re
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pb-20 pt-36 sm:pb-24 lg:min-h-screen lg:pt-40">
+    <section className="relative overflow-hidden pb-20 pt-36 sm:pb-24 lg:min-h-screen">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute right-0 top-0 h-[560px] w-[560px] translate-x-1/3 -translate-y-1/3 rounded-full bg-navy-500/5 blur-[120px]" />
         <div className="absolute bottom-0 left-0 h-[420px] w-[420px] -translate-x-1/4 translate-y-1/4 rounded-full bg-gold-500/8 blur-[110px]" />
@@ -29,7 +29,7 @@ export function Hero() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
-                href="https://wa.me/5598999999999"
+                href="https://wa.me/5598989101285?text=Ol%C3%A1!%20Tudo%20bem?%20Conheci%20o%20trabalho%20de%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20bater%20um%20papo%20sobre%20um%20projeto%20que%20tenho%20em%20mente.%20Podemos%20conversar?%0A"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-navy-500 px-7 py-4 font-sans text-sm font-bold text-white shadow-lg shadow-navy-500/20 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:bg-navy-600 hover:shadow-xl hover:shadow-navy-500/30"
@@ -61,7 +61,6 @@ export function Hero() {
 
           <div className="animate-fade-in relative flex justify-center [animation-delay:0.2s]">
             <div className="relative w-full max-w-xl">
-              <div className="absolute -inset-5 rounded-[2rem] bg-gradient-to-br from-navy-500/10 via-white/30 to-gold-500/15" />
               <div className="relative overflow-hidden rounded-[1.75rem] border border-navy-500/10 bg-white shadow-2xl shadow-navy-500/15">
                 <div className="flex items-center gap-1.5 border-b border-navy-500/5 bg-navy-500 px-5 py-4">
                   <div className="flex gap-1.5">

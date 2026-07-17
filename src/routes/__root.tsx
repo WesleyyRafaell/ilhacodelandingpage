@@ -63,7 +63,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                 addressCountry: 'BR',
               },
               sameAs: [
-                'https://wa.me/5598999999999',
+                'https://wa.me/5598989101285?text=Ol%C3%A1!%20Tudo%20bem?%20Conheci%20o%20trabalho%20de%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20bater%20um%20papo%20sobre%20um%20projeto%20que%20tenho%20em%20mente.%20Podemos%20conversar?%0A',
                 'https://instagram.com/ilhacodesoftwarehouse',
               ],
             }),

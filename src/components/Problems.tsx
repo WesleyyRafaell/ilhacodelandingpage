@@ -66,9 +66,9 @@ export function Problems() {
               return (
                 <div
                   key={problem.title}
-                  className={`group rounded-2xl border border-navy-500/10 bg-white/65 p-5 backdrop-blur-sm transition-all duration-800 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:border-navy-500/20 hover:bg-white hover:shadow-lg reveal reveal-delay-${i + 1} ${isVisible ? 'visible' : ''}`}
+                  className={`card-animation group rounded-2xl border border-navy-500/10 bg-white/65 p-5 backdrop-blur-sm reveal reveal-delay-${i + 1} ${isVisible ? 'visible' : ''}`}
                 >
-                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-gold-500/12 text-gold-600 transition-all duration-800 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:bg-gold-500 group-hover:text-navy-500">
+                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-gold-500/12 text-gold-600 transition-all duration-[560ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:-translate-y-1 group-hover:bg-gold-500 group-hover:text-navy-500">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </div>
                   <h3 className="font-heading text-lg font-semibold text-navy-500">

@@ -9,7 +9,7 @@ export function About() {
       <div className="container-section mx-auto">
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <div ref={imgRef} className={`order-2 lg:order-1 reveal ${imgVisible ? 'visible' : ''}`}>
-            <div className="overflow-hidden rounded-[1.75rem] border border-navy-500/10 bg-white p-3 shadow-2xl shadow-navy-500/10">
+            <div className="overflow-hidden rounded-[1.75rem] border border-navy-500/10 bg-white shadow-2xl shadow-navy-500/10">
               <img src="/azulejos.webp" alt="Azulejos decorativos típicos de São Luís" width={630} height={630} className="aspect-[4/3] w-full rounded-[1.25rem] object-cover" />
             </div>
           </div>

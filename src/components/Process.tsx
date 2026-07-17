@@ -60,9 +60,9 @@ export function Process() {
           {steps.map((step, i) => (
             <div
               key={step.number}
-              className={`group rounded-3xl border border-white/10 bg-white/6 p-6 backdrop-blur-sm transition-all duration-800 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl reveal reveal-delay-${i + 1} ${isVisible ? 'visible' : ''}`}
+              className={`card-animation group rounded-3xl border border-white/10 bg-white/6 p-6 backdrop-blur-sm hover:bg-white/10 hover:shadow-xl reveal reveal-delay-${i + 1} ${isVisible ? 'visible' : ''}`}
             >
-              <div className={`mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-sm font-bold text-white ${step.color}`}>
+              <div className={`mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-sm font-bold text-white transition-all duration-[560ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:-translate-y-1 ${step.color}`}>
                 {step.number}
               </div>
               <h3 className="font-heading text-xl font-semibold text-white">
