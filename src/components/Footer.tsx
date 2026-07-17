@@ -29,7 +29,7 @@ export function Footer() {
             </p>
             <div className="mt-6 flex items-center gap-4">
               <a
-                href="https://wa.me/5598999999999"
+                href="https://wa.me/5598989101285?text=Ol%C3%A1!%20Tudo%20bem?%20Conheci%20o%20trabalho%20de%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20bater%20um%20papo%20sobre%20um%20projeto%20que%20tenho%20em%20mente.%20Podemos%20conversar?%0A"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -73,7 +73,7 @@ export function Footer() {
             <h3 className="font-heading text-base font-semibold text-navy-500">Contato</h3>
             <ul className="mt-4 space-y-3">
               <li className="font-sans text-sm text-ink-light">
-                <a href="https://wa.me/5598999999999" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-navy-500">
+                <a href="https://wa.me/5598989101285?text=Ol%C3%A1!%20Tudo%20bem?%20Conheci%20o%20trabalho%20de%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20bater%20um%20papo%20sobre%20um%20projeto%20que%20tenho%20em%20mente.%20Podemos%20conversar?%0A" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-navy-500">
                   WhatsApp
                 </a>
               </li>
