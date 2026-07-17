@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ArrowRight, Menu, X } from 'lucide-react'
 
 const navLinks = [
   { label: 'Serviços', href: '#servicos' },
@@ -11,20 +12,23 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 right-0 left-0 z-50 border-b border-navy-500/10 bg-cream/90 backdrop-blur-md">
-      <div className="container-section mx-auto flex h-18 items-center justify-between">
-        <a href="/" className="flex items-center gap-2.5">
+    <header className="fixed left-0 right-0 top-4 z-50 px-4">
+      <div className="container-section mx-auto flex h-18 items-center justify-between rounded-2xl border border-navy-500/10 bg-cream-light/90 shadow-xl shadow-navy-500/8 backdrop-blur-md">
+        <a href="/" className="flex items-center gap-2.5" aria-label="Ilha Code">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-navy-500 text-sm font-bold text-white shadow-sm shadow-navy-500/20">
+            IC
+          </span>
           <span className="font-heading text-xl font-bold tracking-tight text-navy-500">
-            Ilha <span className='text-gold-500'>Code</span>
+            Ilha <span className="text-gold-500">Code</span>
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-7 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-ink-light transition-colors hover:text-navy-500"
+              className="border-b border-transparent py-1 text-sm font-semibold text-ink-light transition-colors hover:border-gold-500 hover:text-navy-500"
             >
               {link.label}
             </a>
@@ -33,36 +37,30 @@ export function Header() {
             href="https://wa.me/5598999999999"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-navy-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-navy-600 hover:shadow-md"
+            className="inline-flex items-center gap-2 rounded-xl bg-navy-500 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-navy-500/15 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:bg-navy-600 hover:shadow-xl hover:shadow-navy-500/20"
           >
             Solicitar orçamento
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </a>
         </nav>
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="relative z-50 flex h-10 w-10 items-center justify-center rounded-lg md:hidden"
+          className="relative z-50 flex h-10 w-10 items-center justify-center rounded-xl border border-navy-500/10 text-navy-500 md:hidden"
           aria-label="Abrir menu"
         >
-          <div className="flex flex-col gap-1.5">
-            <span className={`block h-0.5 w-6 rounded bg-navy-500 transition-all ${isOpen ? 'translate-y-2 rotate-45' : ''}`} />
-            <span className={`block h-0.5 w-6 rounded bg-navy-500 transition-all ${isOpen ? 'opacity-0' : ''}`} />
-            <span className={`block h-0.5 w-6 rounded bg-navy-500 transition-all ${isOpen ? '-translate-y-2 -rotate-45' : ''}`} />
-          </div>
+          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
-
       </div>
 
       {isOpen && (
-        <div className="fixed w-screen h-screen inset-0 z-60 flex flex-col items-center justify-center gap-8 bg-white md:hidden">
+        <div className="fixed inset-0 z-40 flex h-screen w-screen flex-col items-center justify-center gap-8 bg-cream-light md:hidden">
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute top-6 right-6 flex h-10 w-10 items-center justify-center rounded-lg text-navy-500/50 hover:text-navy-500"
+            className="absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-xl border border-navy-500/10 text-navy-500/60 hover:text-navy-500"
             aria-label="Fechar menu"
           >
-            <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M18 6L6 18" /><path d="M6 6l12 12" />
-            </svg>
+            <X className="h-6 w-6" />
           </button>
           {navLinks.map((link) => (
             <a
@@ -79,12 +77,13 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
-            className="mt-2 rounded-full bg-navy-500 px-10 py-3.5 font-semibold text-white shadow-lg"
+            className="mt-2 inline-flex items-center gap-2 rounded-xl bg-navy-500 px-10 py-3.5 font-semibold text-white shadow-lg"
           >
             Solicitar orçamento
+            <ArrowRight className="h-4 w-4" />
           </a>
         </div>
-        )}
+      )}
     </header>
   )
 }

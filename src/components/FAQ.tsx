@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { ChevronDown } from 'lucide-react'
+import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const faqs = [
   {
     question: 'Quanto custa um sistema sob medida?',
     answer:
-      'O valor depende do escopo, complexidade e prazo. Fazemos uma análise gratuita do seu projeto e apresentamos um orçamento transparente antes de qualquer compromisso',
+      'O valor depende do escopo, complexidade e prazo. Fazemos uma análise gratuita do seu projeto e apresentamos um orçamento transparente antes de qualquer compromisso.',
   },
   {
     question: 'Vocês atendem empresas fora do Maranhão?',
@@ -23,63 +25,59 @@ const faqs = [
   },
 ]
 
-import { useScrollReveal } from '../hooks/useScrollReveal'
-
 export function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
   const { ref, isVisible } = useScrollReveal()
 
   return (
-    <section id="faq" className="pb-24 sm:pb-28">
+    <section id="faq" className="bg-cream-light py-24 sm:py-28">
       <div ref={ref} className={`container-section mx-auto reveal ${isVisible ? 'visible' : ''}`}>
-        <div className="mx-auto max-w-2xl text-center">
-            <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-navy-500">
+        <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <div>
+            <p className="mb-3 font-sans text-xs font-bold uppercase tracking-[0.15em] text-navy-500">
               Perguntas frequentes
             </p>
-          <h2 className="font-heading text-3xl font-bold leading-tight text-navy-500 sm:text-4xl lg:text-5xl">
-            Ficou alguma dúvida?
-          </h2>
-        </div>
+            <h2 className="font-heading text-3xl font-bold leading-tight text-navy-500 sm:text-4xl lg:text-5xl">
+              Ficou alguma dúvida?
+            </h2>
+            <p className="mt-4 max-w-md font-sans text-base leading-relaxed text-ink-light">
+              O orçamento começa por uma conversa simples para entender escopo, urgência e impacto esperado.
+            </p>
+          </div>
 
-        <div className="mx-auto mt-12 max-w-2xl space-y-3">
-          {faqs.map((faq, i) => (
-            <div
-              key={i}
-              className="overflow-hidden rounded-2xl border border-navy-500/8 bg-white/60 transition-all hover:bg-white"
-            >
-              <button
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                aria-expanded={openIndex === i}
-                className="flex w-full items-center justify-between px-6 py-5 text-left"
-              >
-                <span className="font-heading text-lg font-semibold text-navy-500">
-                  {faq.question}
-                </span>
-                <svg
-                  className={`h-5 w-5 shrink-0 text-navy-500 transition-transform ${
-                    openIndex === i ? 'rotate-180' : ''
-                  }`}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polyline points="6 9 12 15 18 9" />
-                </svg>
-              </button>
+          <div className="space-y-3">
+            {faqs.map((faq, i) => (
               <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === i ? 'max-h-48' : 'max-h-0'
-                }`}
+                key={faq.question}
+                className="overflow-hidden rounded-2xl border border-navy-500/8 bg-white/70 transition-all hover:bg-white"
               >
-                <p className="border-t border-navy-500/5 px-6 py-4 font-sans text-sm leading-relaxed text-ink-light">
-                  {faq.answer}
-                </p>
+                <button
+                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  aria-expanded={openIndex === i}
+                  className="flex w-full items-center justify-between gap-5 px-6 py-5 text-left"
+                >
+                  <span className="font-heading text-lg font-semibold text-navy-500">
+                    {faq.question}
+                  </span>
+                  <ChevronDown
+                    className={`h-5 w-5 shrink-0 text-navy-500 transition-transform ${
+                      openIndex === i ? 'rotate-180' : ''
+                    }`}
+                    aria-hidden="true"
+                  />
+                </button>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    openIndex === i ? 'max-h-48' : 'max-h-0'
+                  }`}
+                >
+                  <p className="border-t border-navy-500/5 px-6 py-4 font-sans text-sm leading-relaxed text-ink-light">
+                    {faq.answer}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

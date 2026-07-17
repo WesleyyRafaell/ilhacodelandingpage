@@ -9,17 +9,13 @@ export function About() {
       <div className="container-section mx-auto">
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <div ref={imgRef} className={`order-2 lg:order-1 reveal ${imgVisible ? 'visible' : ''}`}>
-            <div className="overflow-hidden rounded-2xl border border-navy-500/10 bg-white shadow-xl">
-              <div className="aspect-[4/3] bg-gradient-to-br from-navy-500/5 via-cream to-gold-500/5">
-                <div className="flex h-full flex-col items-center justify-center rounded-xl border border-navy-500/5 bg-cream/80">
-                  <img src="/azulejos.webp" alt="Azulejos decorativos típicos de São Luís" width={630} height={630} className="w-full" />
-                </div>
-              </div>
+            <div className="overflow-hidden rounded-[1.75rem] border border-navy-500/10 bg-white p-3 shadow-2xl shadow-navy-500/10">
+              <img src="/azulejos.webp" alt="Azulejos decorativos típicos de São Luís" width={630} height={630} className="aspect-[4/3] w-full rounded-[1.25rem] object-cover" />
             </div>
           </div>
 
           <div ref={textRef} className={`order-1 lg:order-2 reveal ${textVisible ? 'visible' : ''}`}>
-            <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-navy-500">
+            <p className="mb-3 font-sans text-xs font-bold uppercase tracking-[0.15em] text-navy-500">
               Nossa história
             </p>
             <h2 className="font-heading text-3xl font-bold leading-tight text-navy-500 sm:text-4xl lg:text-5xl">
@@ -27,14 +23,10 @@ export function About() {
               <span className="text-gold-500">Atendemos o Brasil.</span>
             </h2>
             <p className="mt-4 font-sans text-base leading-relaxed text-ink-light">
-              A Ilha Code nasceu em São Luís do Maranhão, mas atende empresas de
-              todo o país. Unimos tecnologia moderna com atendimento humano e
-              próximo.
+              A Ilha Code nasceu em São Luís do Maranhão, mas atende empresas de todo o país. Unimos tecnologia moderna com atendimento humano e próximo.
             </p>
             <p className="mt-3 font-sans text-base leading-relaxed text-ink-light">
-              Somos uma equipe enxuta, especializada e obcecada por qualidade. Cada
-              projeto é tratado como único, com a dedicação que um produto feito sob
-              medida merece.
+              Somos uma equipe enxuta, especializada e obcecada por qualidade. Cada projeto é tratado como único, com a dedicação que um produto feito sob medida merece.
             </p>
 
             <div className="mt-8 grid grid-cols-3 gap-4">
@@ -43,7 +35,7 @@ export function About() {
                 { value: '100%', label: 'Sob medida' },
                 { value: 'SLZ', label: 'Made in São Luís' },
               ].map((stat, i) => (
-                <div key={stat.label} className={`rounded-xl border border-navy-500/8 bg-white/60 p-4 text-center reveal reveal-delay-${i + 1} ${textVisible ? 'visible' : ''}`}>
+                <div key={stat.label} className={`rounded-2xl border border-navy-500/8 bg-white/70 p-4 text-center shadow-sm shadow-navy-500/5 reveal reveal-delay-${i + 1} ${textVisible ? 'visible' : ''}`}>
                   <p className="font-heading text-2xl font-bold text-navy-500">{stat.value}</p>
                   <p className="mt-0.5 font-sans text-xs text-ink-light">{stat.label}</p>
                 </div>
